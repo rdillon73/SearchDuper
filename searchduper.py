@@ -1,8 +1,8 @@
 '''
 SearchDuper v 0.1.0
-by Roberto Dillon (Adsumsoft)
+by Roberto Dillon
 
-A simple meta-search script written in python that collates results from different search engines by using beautifulsoup4 for web scraping, 
+A simple meta-search script written in Python that collates results from different search engines by using beautifulsoup4 for web scraping, 
 re for parsing results and pandas to save unique results (no duplicates) in a CSV file. 
 
 Example: 
@@ -45,7 +45,7 @@ def search(query, num_results=50, search_engine="google"):
         "bing": f"https://www.bing.com/search?q={query}&count={num_results}",
         "yahoo": f"https://search.yahoo.com/search?p={query}&n={num_results}",
     }
-
+    # Adding a User-Agent header to the HTTP request makes it appear as if the request is coming from a web browser
     headers = {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36"
     }
