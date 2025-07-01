@@ -1,4 +1,4 @@
-# SearchDuper
+# SearchDuper v.0.2.0
 A simple meta-search that queries different search engines and collates unique results in a csv file.
 by Roberto Dillon (Adsumsoft)
 
@@ -17,3 +17,65 @@ Basic help available with
 
 Be sure you install the following libraries if needed:
 > pip install requests beautifulsoup4 pandas argparse datetime re
+
+------
+Major Improvements in v0.2.0:
+1. Object-Oriented Design
+
+Created a SearchDuper class for better organization and reusability
+Added a SearchEngine class for cleaner configuration management
+Separated concerns into logical methods
+
+2. Better Error Handling & Logging
+
+Added comprehensive logging with different levels (INFO, WARNING, ERROR)
+Implemented retry logic with configurable attempts
+Added proper exception handling throughout
+Input validation for arguments
+
+3. Enhanced URL Processing
+
+Improved URL validation with proper parsing
+Added URL cleaning to remove tracking parameters
+Better filtering of unwanted domains and URLs
+More robust regex patterns for URL extraction
+
+4. Code Quality & Maintainability
+
+Added comprehensive docstrings for all methods
+Type hints for better code documentation
+Used constants for configuration
+Separated business logic from presentation
+Added proper imports organization
+
+5. Enhanced Features
+
+Configurable timeout and retry settings
+Better CSV output with additional metadata (search query, timestamp)
+Safer filename generation
+More informative console output with emojis
+Enhanced command-line interface with examples
+
+6. Performance & Reliability
+
+Uses requests.Session() for connection pooling
+Better memory management with sets for deduplication
+More efficient URL processing
+Proper resource cleanup
+
+7. Security & Best Practices
+
+Safer URL handling
+Input sanitization for filenames
+Proper encoding of search queries
+Updated user agent string
+
+Key Features Added:
+
+Logging system for debugging and monitoring
+Retry mechanism for failed requests
+URL cleaning to remove tracking parameters
+Enhanced CSV output with metadata
+Better error messages and user feedback
+Input validation and argument checking
+Configurable timeouts and retry attempts
